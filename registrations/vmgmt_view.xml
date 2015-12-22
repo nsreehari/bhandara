@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+
+        <menuitem name="Bhandara" id="menu_vmgmt" sequence="120" />
+
+
+
+
+        <record model='ir.ui.view' id='zvent_zvent_form'>
+            <field name="name">bhandara.volunteers.form</field>
+            <field name="model">bhandara.volunteers</field>
+            <field name="arch" type="xml">
+                <form string="Model" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                        </div>
+                        <group col="2">
+                            <group>
+                    <field name="abhyasiid" />
+                    <field name="email" />
+                    <field name="phone" />
+                    <field name="count" />
+                            </group>
+                            <group>
+                    <field name="skills" />
+                    <field name="center" />
+                    <field name="locality" />
+                    <field name="transport" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='zvent_zvent_tree'>
+            <field name="name">bhandara.volunteers.tree</field>
+            <field name="model">bhandara.volunteers</field>
+            <field name="arch" type="xml">
+                <tree string="Models" version="7.0">
+                    <field name="abhyasiid" />
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="phone" />
+                    <field name="count" />
+                    <field name="skills" />
+                    <field name="center" />
+                    <field name="locality" />
+                    <field name="transport" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='amssw_department_model_search'>
+            <field name="name">bhandara.volunteers.search</field>
+            <field name="model">bhandara.volunteers</field>
+            <field name="arch" type="xml">
+                <search string="Volunteers" >
+                    <field name="name" />
+                    <field name="center" />
+                    <field name="locality" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_locality" context="{'group_by' : 'locality'}" string="Locality"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='zvent_zvent_act'>
+            <field name="name">Volunteer Registrations</field>
+            <field name="res_model">bhandara.volunteers</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Volunteer.
+              </p><p>
+              </p>
+            </field>
+        </record>
+ 
+
+
+
+        <record model='ir.ui.view' id='zvent_abhyasis_form'>
+            <field name="name">bhandara.abhyasis.form</field>
+            <field name="model">bhandara.abhyasis</field>
+            <field name="arch" type="xml">
+                <form string="Model" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                        </div>
+                        <group col="2">
+                            <group>
+                    <field name="abhyasiid" />
+                    <field name="salutation" />
+                    <field name="age" />
+                    <field name="email" />
+                    <field name="phone" />
+                    <field name="center" />
+                    <field name="doa" />
+                    <field name="dod" />
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='zvent_abhyasis_tree'>
+            <field name="name">bhandara.abhyasis.tree</field>
+            <field name="model">bhandara.abhyasis</field>
+            <field name="arch" type="xml">
+                <tree string="Abhyasi Registrations" version="7.0">
+                    <field name="abhyasiid" />
+                    <field name="salutation" />
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="email" />
+                    <field name="phone" />
+                    <field name="center" />
+                    <field name="doa" />
+                    <field name="dod" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='amssw_model_search'>
+            <field name="name">bhandara.abhyasis.search</field>
+            <field name="model">bhandara.abhyasis</field>
+            <field name="arch" type="xml">
+                <search string="Abhyasi Registrations" >
+                    <field name="name" />
+                    <field name="center" />
+                    <field name="email" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_center" context="{'group_by' : 'center'}" string="Center"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='zvent_registrations_act'>
+            <field name="name">Abhyasi Registrations</field>
+            <field name="res_model">bhandara.abhyasis</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Abhyasi Registration
+              </p><p>
+              </p>
+            </field>
+        </record>
+        <menuitem action='zvent_zvent_act' name="Volunteer Registrations" parent="menu_vmgmt" 
+            id="vmgmt_events" sequence="5" 
+            />
+
+        <menuitem action='zvent_registrations_act' name="Abhyasi Registrations" parent="menu_vmgmt" 
+            id="vmgmt_registrations" sequence="5" 
+            />
+
+
+    </data>
+</openerp> 
+
+
+
