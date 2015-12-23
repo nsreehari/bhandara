@@ -2,9 +2,89 @@
 <openerp>
     <data>
 
-
-
         <menuitem name="Bhandara" id="menu_vmgmt" sequence="120" />
+
+
+        <record model='ir.ui.view' id='vneeds_form'>
+            <field name="name">bhandara.vneeds.form</field>
+            <field name="model">bhandara.vneeds</field>
+            <field name="arch" type="xml">
+                <form string="Volunteer Needs" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="project" class="oe_edit_only"/>
+                            <h1>
+                                <field name="project" />
+                            </h1>
+                        </div>
+                        <group col="2">
+                            <group>
+                    <field name="numvolunteers" />
+                    <field name="skills" />
+                            </group>
+                            <group>
+                    <field name="work" />
+                    <field name="fromdate" />
+                    <field name="todate" />
+                    <field name="days" />
+                            </group>
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="mobile" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='vneeds_tree'>
+            <field name="name">bhandara.vneeds.tree</field>
+            <field name="model">bhandara.vneeds</field>
+            <field name="arch" type="xml">
+                <tree string="Volunteer Needs" version="7.0">
+                    <field name="project" />
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="mobile" />
+                    <field name="work" />
+                    <field name="skills" />
+                    <field name="numvolunteers" />
+                    <field name="fromdate" />
+                    <field name="todate" />
+                    <field name="days" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='vneeds_search'>
+            <field name="name">bhandara.vneeds.search</field>
+            <field name="model">bhandara.vneeds</field>
+            <field name="arch" type="xml">
+                <search string="Volunteer Needs" >
+                    <field name="project" />
+                    <field name="name" />
+                    <field name="work" />
+                    <field name="days" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_project" context="{'group_by' : 'project'}" string="Project"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='vneeds_act'>
+            <field name="name">Volunteer Needs</field>
+            <field name="res_model">bhandara.vneeds</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                  Click to create a new Project with Volunteer Need/Requirement.
+              </p><p>
+              </p>
+            </field>
+        </record>
+ 
+
 
 
 
@@ -163,12 +243,20 @@
               </p>
             </field>
         </record>
+
+
+
+
         <menuitem action='zvent_zvent_act' name="Volunteer Registrations" parent="menu_vmgmt" 
             id="vmgmt_events" sequence="5" 
             />
 
         <menuitem action='zvent_registrations_act' name="Abhyasi Registrations" parent="menu_vmgmt" 
-            id="vmgmt_registrations" sequence="5" 
+            id="vmgmt_registrations" sequence="9" 
+            />
+
+        <menuitem action='vneeds_act' name="Volunteer Needs" parent="menu_vmgmt" 
+            id="vneeds" sequence="3" 
             />
 
 

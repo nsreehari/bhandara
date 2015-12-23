@@ -20,20 +20,16 @@
 ##############################################################################
 {
     'name': 'Volunteer Registrations App',
-    'version': '0.2',
+    'version': '0.3',
     'category': 'Tools',
-    'summary': 'Trainings, Conferences, Meetings, Exhibitions, Registrations',
+    'summary': 'Volunteer Needs and Registrations',
     'description': """
-Organization and management of Zvents.
-======================================
+Volunteer Needs and Volunteer Registrations
+===========================================
 
-The zvent module allows you to efficiently organise zvents and all related tasks: planification, registration tracking,
-attendances, etc.
+Register a Project with Volunteer Needs
+Register yourself as a volunteer
 
-Key Features
-------------
-* Manage your Zvents and Registrations
-* Use emails to automatically confirm and send acknowledgements for any zvent registration
 """,
     'author': 'Sree Hari Nagaralu',
     'depends': [],

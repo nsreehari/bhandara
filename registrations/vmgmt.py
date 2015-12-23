@@ -66,7 +66,7 @@ class bhandara_volunteers(models.Model):
     _name = 'bhandara.volunteers'
     _order = 'name, create_date desc'
 
-    abhyasiid = fields.Integer(string='Abhyasi ID', required=True)
+    abhyasiid = fields.Char(string='Abhyasi ID', required=True)
     name = fields.Char(string='Volunteer Name', required=True)
     email = fields.Char(string='Email')
     phone = fields.Char(string='Phone')
@@ -80,7 +80,7 @@ class bhandara_volunteers(models.Model):
 class bhandara_abhyasis(models.Model):
     _name = 'bhandara.abhyasis'
 
-    abhyasiid = fields.Integer(string='Abhyasi ID', required=True)
+    abhyasiid = fields.Char(string='Abhyasi ID', required=True)
     salutation = fields.Char(string='Salutation')
     name = fields.Char(string='Abhyasi Name', required=True)
     center = fields.Char(string='Center', required=True)
@@ -89,3 +89,31 @@ class bhandara_abhyasis(models.Model):
     age = fields.Integer(string='Age')
     doa = fields.Datetime(string='Date of Arrival')
     dod = fields.Datetime(string='Date of Departure')
+
+
+class volunteer_needs(models.Model):
+    _name = 'bhandara.vneeds'
+
+    name = fields.Char(string='Contact Person', required=True)
+    mobile = fields.Char(string='Contact Phone', size=12, required=True)
+    email = fields.Char(string='Contact Email', required=True)
+    project = fields.Char(string='Project', required=True)
+    work = fields.Char(string='Work Description', required=True)
+    numvolunteers = fields.Char(string='Number of Volunteers', required=True)
+    skills = fields.Char(string='Skills', required=True)
+    fromdate = fields.Date(string='From Date', required=True)
+    todate = fields.Date(string='To Date', required=True)
+    days = fields.Selection( [( 'weekdays', 'Weekdays'),
+                    ('weekends', 'Saturdays and Sundays'),   
+                    ('monday', 'Mondays'),   
+                    ('tuesday', 'Tuesdays'),   
+                    ('wednesday', 'Wednesdays'),   
+                    ('thursday', 'Thursdays'),   
+                    ('friday', 'Fridays'),   
+                    ('saturday', 'Saturdays'),   
+                    ('sunday', 'Sundays'),   
+                    ('anyday', 'All Days')],   
+                    string='Days', required=True)
+
+
+
