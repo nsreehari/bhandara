@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Volunteer Registrations App',
-    'version': '0.3',
+    'version': '1.0',
     'category': 'Tools',
     'summary': 'Volunteer Needs and Registrations',
     'description': """

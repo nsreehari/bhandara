@@ -85,6 +85,7 @@
         </record>
  
 
+        <menuitem action='vneeds_act' name="Volunteer Needs" parent="menu_vmgmt" id="vneeds" sequence="3" />
 
 
 
@@ -165,6 +166,7 @@
             </field>
         </record>
  
+        <menuitem action='zvent_zvent_act' name="Volunteer Registrations" parent="menu_vmgmt" id="vmgmt_events" sequence="5" />
 
 
 
@@ -245,19 +247,278 @@
         </record>
 
 
+        <menuitem action='zvent_registrations_act' name="Abhyasi Registrations" parent="menu_vmgmt" id="vmgmt_registrations" sequence="9" />
 
 
-        <menuitem action='zvent_zvent_act' name="Volunteer Registrations" parent="menu_vmgmt" 
-            id="vmgmt_events" sequence="5" 
-            />
+        <record model='ir.ui.view' id='buses_form'>
+            <field name="name">bhandara.buses.form</field>
+            <field name="model">bhandara.buses</field>
+            <field name="arch" type="xml">
+                <form string="Buses" version="7.0">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                    <field name="name" />
+                    <field name="starttime" />
+                    <field name="arrivaltime" />
+                    <field name="droplocation" />
+                    <field name="directions" />
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='buses_tree'>
+            <field name="name">bhandara.buses.tree</field>
+            <field name="model">bhandara.buses</field>
+            <field name="arch" type="xml">
+                <tree string="Buses" version="7.0">
+                    <field name="name" />
+                    <field name="starttime" />
+                    <field name="arrivaltime" />
+                    <field name="droplocation" />
+                    <field name="directions" />
+                </tree>
+            </field>
+        </record>
 
-        <menuitem action='zvent_registrations_act' name="Abhyasi Registrations" parent="menu_vmgmt" 
-            id="vmgmt_registrations" sequence="9" 
-            />
+        <record model='ir.ui.view' id='buses_search'>
+            <field name="name">bhandara.buses.search</field>
+            <field name="model">bhandara.buses</field>
+            <field name="arch" type="xml">
+                <search string="Buses" >
+                    <field name="name" />
+                    <field name="droplocation" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_droplocation" context="{'group_by' : 'droplocation'}" string="Drop Location"/>
+                    </group>
+                </search>
+            </field>
+        </record>
 
-        <menuitem action='vneeds_act' name="Volunteer Needs" parent="menu_vmgmt" 
-            id="vneeds" sequence="3" 
-            />
+        <record model='ir.actions.act_window' id='buses_act'>
+            <field name="name">Buses</field>
+            <field name="res_model">bhandara.buses</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Bus Entry
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+
+        <menuitem action='buses_act' name="Bus Timings" parent="menu_vmgmt" id="vmgmt_buses" sequence="9" />
+
+
+
+
+        <record model='ir.ui.view' id='trains_form'>
+            <field name="name">bhandara.trains.form</field>
+            <field name="model">bhandara.trains</field>
+            <field name="arch" type="xml">
+                <form string="Trains" version="7.0">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                    <field name="name" />
+                    <field name="fromstation" />
+                    <field name="fromtime" />
+                    <field name="dropstation" />
+                    <field name="droptime" />
+                    <field name="directions" />
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='trains_tree'>
+            <field name="name">bhandara.trains.tree</field>
+            <field name="model">bhandara.trains</field>
+            <field name="arch" type="xml">
+                <tree string="Trains" version="7.0">
+                    <field name="name" />
+                    <field name="fromstation" />
+                    <field name="fromtime" />
+                    <field name="dropstation" />
+                    <field name="droptime" />
+                    <field name="directions" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='trains_search'>
+            <field name="name">bhandara.trains.search</field>
+            <field name="model">bhandara.trains</field>
+            <field name="arch" type="xml">
+                <search string="Trains" >
+                    <field name="name" />
+                    <field name="fromstation" />
+                    <field name="dropstation" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_fromstation" context="{'group_by' : 'fromstation'}" string="From Station"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='trains_act'>
+            <field name="name">Trains</field>
+            <field name="res_model">bhandara.trains</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Train Entry
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+
+        <menuitem action='trains_act' name="Train Timings" parent="menu_vmgmt" id="vmgmt_trains" sequence="9" />
+
+
+
+
+
+        <record model='ir.ui.view' id='hotels_form'>
+            <field name="name">bhandara.hotels.form</field>
+            <field name="model">bhandara.hotels</field>
+            <field name="arch" type="xml">
+                <form string="Hotels" version="7.0">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                    <field name="name" />
+                    <field name="address" />
+                    <field name="distance" />
+                    <field name="hotelcontact" />
+                    <field name="volunteercontact" />
+                    <field name="directions" />
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='hotels_tree'>
+            <field name="name">bhandara.hotels.tree</field>
+            <field name="model">bhandara.hotels</field>
+            <field name="arch" type="xml">
+                <tree string="Hotels" version="7.0">
+                    <field name="name" />
+                    <field name="address" />
+                    <field name="distance" />
+                    <field name="hotelcontact" />
+                    <field name="volunteercontact" />
+                    <field name="directions" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='hotels_search'>
+            <field name="name">bhandara.hotels.search</field>
+            <field name="model">bhandara.hotels</field>
+            <field name="arch" type="xml">
+                <search string="Hotels" >
+                    <field name="name" />
+                    <field name="address" />
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='hotels_act'>
+            <field name="name">Hotels</field>
+            <field name="res_model">bhandara.hotels</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new Hotel Entry
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+
+        <menuitem action='hotels_act' name="Hotels" parent="menu_vmgmt" id="vmgmt_hotels" sequence="9" />
+
+
+
+
+        <record model='ir.ui.view' id='pocs_form'>
+            <field name="name">bhandara.pocs.form</field>
+            <field name="model">bhandara.pocs</field>
+            <field name="arch" type="xml">
+                <form string="POCs" version="7.0">
+                    <sheet>
+                        <group col="2">
+                            <group>
+                    <field name="name" />
+                    <field name="phone" />
+                    <field name="department" />
+                    <field name="email" />
+                    <field name="center" />
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='pocs_tree'>
+            <field name="name">bhandara.pocs.tree</field>
+            <field name="model">bhandara.pocs</field>
+            <field name="arch" type="xml">
+                <tree string="POCs" version="7.0">
+                    <field name="name" />
+                    <field name="phone" />
+                    <field name="department" />
+                    <field name="email" />
+                    <field name="center" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='pocs_search'>
+            <field name="name">bhandara.pocs.search</field>
+            <field name="model">bhandara.pocs</field>
+            <field name="arch" type="xml">
+                <search string="POCs" >
+                    <field name="name" />
+                    <field name="department" />
+                    <field name="center" />
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='pocs_act'>
+            <field name="name">POCs</field>
+            <field name="res_model">bhandara.pocs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to create a new POC Entry
+              </p><p>
+              </p>
+            </field>
+        </record>
+
+
+        <menuitem action='pocs_act' name="POCs" parent="menu_vmgmt" id="vmgmt_pocs" sequence="9" />
 
 
     </data>

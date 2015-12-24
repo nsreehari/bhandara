@@ -117,3 +117,48 @@ class volunteer_needs(models.Model):
 
 
 
+class bus_timings(models.Model):
+    _name = 'bhandara.buses'
+
+    name = fields.Char(string='Pickup Place', required=True)
+    starttime = fields.Char(string='Bus Start Time', required=True)
+    arrivaltime = fields.Char(string='Bus Arrival Time', required=True)
+    droplocation = fields.Char(string='Bus Drop Location', required=True)
+    directions = fields.Char(string='Directions from drop place to Kanha', required=True)
+
+class train_timings(models.Model):
+    _name = 'bhandara.trains'
+
+    name = fields.Char(string='Train Name', required=True)
+    fromstation = fields.Char(string='From Station', required=True)
+    fromtime = fields.Char(string='From Time', required=True)
+    dropstation = fields.Char(string='Drop Station', required=True)
+    droptime = fields.Char(string='Drop Time', required=True)
+    directions = fields.Char(string='Directions from drop place to Kanha', required=True)
+
+
+
+class hotels(models.Model):
+    _name = 'bhandara.hotels'
+
+    name = fields.Char(string='Hotel Name', required=True)
+    address = fields.Char(string='Address', required=True)
+    distance = fields.Char(string='Distance from Kanha', required=True)
+    hotelcontact = fields.Char(string='Hotel Contact Person and Number', required=True)
+    volunteercontact = fields.Char(string='Volunteer Name and Contact', required=True)
+    directions = fields.Char(string='Directions from hotel to Kanha', required=True)
+
+
+
+class pocs(models.Model):
+    _name = 'bhandara.pocs'
+
+    name = fields.Char(string='Name', required=True)
+    phone = fields.Char(string='Phone', required=True)
+    department = fields.Char(string='Area or Department', required=True)
+    email = fields.Char(string='Email')
+    center = fields.Char(string='Center', required=True)
+
+
+
+
