@@ -277,9 +277,9 @@ $(document).ready(function() {
 
 
 
-$('#myCarousel').on("slide.bs.carousel", function(){
-         $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
-         $(this).off("slide.bs.carousel");
-    });
+//$('#myCarousel').on("slide.bs.carousel", function(){
+//         $(".carousel-control",this).css('top',($(".active img",this).height()*0.46)+'px');
+//         $(this).off("slide.bs.carousel");
+//    });
 
 });
