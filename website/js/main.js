@@ -3,7 +3,7 @@ function loadvneeds()
 {
   $.ajax({
     type: 'GET',
-    url : "js/vneeds.json",
+    url : "img/vneeds.json",
     dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
@@ -51,7 +51,7 @@ function loadbuses()
 {
   $.ajax({
     type: 'GET',
-    url : "js/buses.json",
+    url : "img/buses.json",
     dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
@@ -94,7 +94,7 @@ function loadtrains()
 {
   $.ajax({
     type: 'GET',
-    url : "js/trains.json",
+    url : "img/trains.json",
     dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
@@ -138,7 +138,7 @@ function loadpocs()
 {
   $.ajax({
     type: 'GET',
-    url : "js/pocs.json",
+    url : "img/pocs.json",
     dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
@@ -174,7 +174,7 @@ function loadhotels()
 {
   $.ajax({
     type: 'GET',
-    url : "js/hotels.json",
+    url : "img/hotels.json",
     dataType : 'json',
     success:function(globalgrid, textStatus, jqXHR) 
     {
