@@ -222,6 +222,8 @@ $(document).ready(function() {
     loadtrains();
     loadpocs();
     loadhotels();
+        
+    $('#registerform').hide();
 
     $("#simple-post").click(function() {
 
@@ -266,4 +268,10 @@ $(document).ready(function() {
 
     });
 
+
+
+    $('#registerlink').click(function(e) {
+        $('#registerform').toggle();
+        e.preventDefault();
+    });
 });
