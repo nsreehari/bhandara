@@ -3,8 +3,8 @@ function loadvneeds()
 {
   $.ajax({
     type: 'GET',
-    dataType: 'jsonp',
-    url : "http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.vneeds?cols=name,project,mobile,work,fromdate,todate,days,skills,numvolunteers",
+    url : "js/vneeds.json",
+    dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
  
@@ -51,8 +51,8 @@ function loadbuses()
 {
   $.ajax({
     type: 'GET',
-    dataType: 'jsonp',
-    url : "http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.buses?cols=name,starttime,arrivaltime,droplocation,directions",
+    url : "js/buses.json",
+    dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
  
@@ -94,8 +94,8 @@ function loadtrains()
 {
   $.ajax({
     type: 'GET',
-    dataType: 'jsonp',
-    url : "http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.trains?cols=name,fromstation,fromtime,dropstation,droptime,directions",
+    url : "js/trains.json",
+    dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
  
@@ -138,8 +138,8 @@ function loadpocs()
 {
   $.ajax({
     type: 'GET',
-    dataType: 'jsonp',
-    url : "http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.pocs?cols=name,phone,department,email,center",
+    url : "js/pocs.json",
+    dataType : "json",
     success:function(globalgrid, textStatus, jqXHR) 
     {
  
@@ -174,8 +174,8 @@ function loadhotels()
 {
   $.ajax({
     type: 'GET',
-    dataType: 'jsonp',
-    url : "http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.hotels?cols=name,address,distance,hotelcontact,volunteercontact,directions",
+    url : "js/hotels.json",
+    dataType : 'json',
     success:function(globalgrid, textStatus, jqXHR) 
     {
  
