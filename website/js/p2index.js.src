@@ -159,7 +159,7 @@ function pocfnc(globalgrid, textStatus, jqXHR)
 			+ '<div><strong>' + globalgrid[i]['name'] + '  ( ' 
 			+ globalgrid[i]['center'] + ' )  </strong></div>'
 			+ '<div>' + globalgrid[i]['phone'] + '</div>'
-			+ '<div>' + globalgrid[i]['email'] + '</div>'
+			+ '<div>' + globalgrid[i]['email'] + '</div><br><br>'
 			+ '</div>');
       }
 };

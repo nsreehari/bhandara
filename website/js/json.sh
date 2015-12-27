@@ -8,6 +8,9 @@ echo 'buses='''`curl http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara
 echo 'trains='''`curl http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.trains?cols=name,fromstation,fromtime,dropstation,droptime,directions`''';' >> p2index.js
 
 echo 'hotels='''`curl http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.hotels?cols=name,address,distance,hotelcontact,volunteercontact,directions`''';' >> p2index.js
-echo 'pocs='''`curl http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.pocs`''';' >> p2index.js
+echo 'pocs='''`curl http://bitnami-odoo-d47c.cloudapp.net:8068/bitnami/bhandara.pocs?cols=name,phone,department,email,center`''';' >> p2index.js
 
 cat p2index.js.src >> p2index.js
+
+
+
