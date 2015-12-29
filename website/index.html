@@ -32,6 +32,19 @@
       type="image/png" 
       href="img/fav3.png">
 
+      <style>
+table {
+    background-color: transparent;
+}
+
+tr:nth-child(even){background-color: #d9b38c}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -64,12 +77,14 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    <!--
                     <li>
                         <a class="page-scroll" href="#transport1">Transportation</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#acco1">Accomodation</a>
                     </li>
+                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -366,19 +381,26 @@ function initMap() {
                 </div>
             </div>
         </div>
+        <div class="container">
         <div class="row">
-            <br>
-        </div>
-        <p>
+            <div class="col-lg-8 col-lg-offset-2">
+                <br><br>
+                <p>
         	As this is the first time for most of you to visit kanha, please note the following contact details of various departments who are available to help you anytime during the bhandara.<br>
-        </p>
+                </p>
+            </div>
+        </div>
         <div class="row" id="gridpocs">
         </div>
-            <br><br><div class="col-lg-8 col-lg-offset-2">
+        <div class="row" >
+            <div class="col-lg-8 col-lg-offset-2">
+                <br><br>
                 <p>For any further information, mail to: 
                 <a  href="mailto:celebration@kanhashantivanam.org">celebration@kanhashantivanam.org</a>
                 </p>
             </div>
+        </div>
+        </div>
          
 
     </section>
@@ -394,10 +416,15 @@ function initMap() {
         </div>
         <div class="row">
             <br>
-        	<p>
+        	
+
+    <!-- About Section -->
+    <section id="transport" class="container content-section text-center">
+        <div class="row">
+        <p>
                 	Please refer to the tables below to find train and bus timings from various areas to reach kanha.<br><br>
-            </p>
-            <div class="col-lg-6 ">
+        </p>
+        <div class= "col-lg-6">     
                 <h2>Train Timings</h2>
 		<div class="table-responsive">
 		   <table class="table table-bordered">
@@ -407,9 +434,10 @@ function initMap() {
 			</tbody>
 		   </table>
 		</div>
-            </div>
-            <div class="col-lg-6">
-                <h2>Bus Timings</h2>
+		</div>
+           
+        <div class= "col-lg-6">   
+                <h2><br>Bus Timings</h2>
 		<div class="table-responsive">
 		   <table class="table table-bordered">
 			<thead id="gridbuseshead">
@@ -418,7 +446,7 @@ function initMap() {
 			</tbody>
 		   </table>
 		</div>
-            </div>
+		</div>
         </div>
     </section>
 
@@ -433,11 +461,17 @@ function initMap() {
         </div>
         <br>
         <div class="row">
+        </div>
+        </section>
+            
+        <!-- About Section -->
+    <section id="accomodation" class="container content-section text-center">
+        <div class="row">
         <p>
         	
         	Accomodation at kanha shanti vanam is broadly divided into 3 sections:<br>1. Accomodation in tents at the venue<br>2. Accomodation in sukh nivas at the venue <br>3. Accomodation in nearby hotels.<br> Kindly register from the link below to avail sukh nivas facility and refer to the table below for hotel details.<br>
         </p>
-            <div class="col-lg-6 ">
+            <div class= "col-lg-6">
                 <h2>Hotels</h2>
 		<div class="table-responsive">
 		   <table class="table table-bordered">
@@ -446,13 +480,13 @@ function initMap() {
 			<tbody  id='gridhotels'>
 			</tbody>
 		   </table>
+		   </div>
 		</div>
-            </div>
-            <div class="col-lg-6">
-                <h2>Sukh Nivas</h2>
+            
+            
+                <h2><br><br>Sukh Nivas</h2>
 		<div> Registration link Coming Soon
 		</div>
-            </div>
         </div>
     </section>
 
@@ -471,6 +505,7 @@ function initMap() {
     <script src="js/grayscale.js"></script>
 
     <!-- This is main JS file -->
+    <script src='js/p1index.js'> </script>
     <script src='js/p2index.js'> </script>
 
 </body>
