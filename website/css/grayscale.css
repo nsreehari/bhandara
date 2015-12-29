@@ -271,40 +271,39 @@ a:focus {
 
 .download-section {
     width: 100%;
-    padding: 125px 0;
+    padding: 100px 0;
     color: #fff;
     background: url(../img/a2.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
+    background-size: 100% 100%;
     -o-background-size: cover;
 }
 
 .transport-section {
     width: 100%;
     height: auto;
-    padding: 125px 0;
+    padding: 100px 0;
     color: #fff;
     background: url(../img/a3.jpg) no-repeat center center scroll;
     background-size: 100% 100%;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
 }
 
 .acco-section {
     width: 100%;
     height: auto;
-    padding: 125px 0;
+    padding: 100px 0;
     color: #fff;
     background: url(../img/a4.jpg) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
+    background-size: 100% 100%;
     -o-background-size: cover;
 }
 
@@ -324,7 +323,7 @@ a:focus {
     }
 
     #map {
-        height: 400px;
+        height: 500px;
         margin-top: 250px;
     }
 }
