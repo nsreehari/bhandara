@@ -7,7 +7,7 @@
 body {
     width: 100%;
     height: 100%;
-    font-family: Lucida Calligraphy,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: minion pro,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #0057b3;
     background-color: #F5DEB3;
     background-image: url(LTM_Logo.png);
@@ -315,7 +315,7 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 100px;
+        padding-top: 250px;
     }
 
     .download-section {
