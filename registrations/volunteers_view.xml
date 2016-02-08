@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record model='ir.ui.view' id='bhandara_volunteersdb_form'>
+            <field name="name">bhandara.volunteersdb.form</field>
+            <field name="model">bhandara.volunteersdb</field>
+            <field name="arch" type="xml">
+                <form string="Volunteer" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" />
+                            </h1>
+                        </div>
+                        <group col="2">
+                            <group>
+                    <field name="abhyasiid" />
+                    <field name="email" />
+                    <field name="phone" />
+                            </group>
+                            <group>
+                    <field name="centre" />
+                    <field name="gender" />
+                    <field name="age" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model='ir.ui.view' id='bhandara_volunteersdb_tree'>
+            <field name="name">bhandara.volunteersdb.tree</field>
+            <field name="model">bhandara.volunteersdb</field>
+            <field name="arch" type="xml">
+                <tree string="Volunteers" version="7.0">
+                    <field name="abhyasiid" />
+                    <field name="name" />
+                    <field name="email" />
+                    <field name="phone" />
+                    <field name="centre" />
+                    <field name="gender" />
+                    <field name="age" />
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='amssw_departmentdb_model_search'>
+            <field name="name">bhandara.volunteersdb.search</field>
+            <field name="model">bhandara.volunteersdb</field>
+            <field name="arch" type="xml">
+                <search string="Volunteers" >
+                    <field name="name" />
+                    <field name="centre" />
+                    <group expand="1" string="Group By...">
+                        <filter name="groupby_centre" context="{'group_by' : 'centre'}" string="Centre"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model='ir.actions.act_window' id='bhandara_volunteersdb_act'>
+            <field name="name">Volunteer Registrations</field>
+            <field name="res_model">bhandara.volunteersdb</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a new Volunteer.
+              </p><p>
+              </p>
+            </field>
+        </record>
+ 
+        <menuitem action='bhandara_volunteersdb_act' name="Volunteer Registrations" parent="menu_vmgmt" id="volunteer_registrations" sequence="5" />
+
+
+        <record model='ir.actions.act_window' id='bhandara_depts_act'>
+            <field name="name">Departments</field>
+            <field name="res_model">bhandara.depts</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">form,tree</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to add a new Department.
+              </p><p>
+              </p>
+            </field>
+        </record>
+ 
+        <menuitem action='bhandara_depts_act' name="Departments" parent="menu_vmgmt" id="depts" sequence="8" />
+
+    </data>
+</openerp> 
+
+
+

@@ -34,7 +34,8 @@ Register yourself as a volunteer
     'author': 'Sree Hari Nagaralu',
     'depends': [],
     'data': [
-        'vmgmt_view.xml',
+        'main_view.xml',
+        'volunteers_view.xml',
     ],
     'installable': True,
     'auto_install': False,

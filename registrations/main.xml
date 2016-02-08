@@ -2,6 +2,9 @@
 <openerp>
     <data>
 
+        <menuitem name="Bhandara" id="menu_vmgmt" sequence="120" />
+
+
         <record model='ir.ui.view' id='vneeds_form'>
             <field name="name">bhandara.vneeds.form</field>
             <field name="model">bhandara.vneeds</field>
