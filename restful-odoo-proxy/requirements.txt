@@ -1,0 +1,8 @@
+setuptools
+Twisted
+lxml
+pyatom
+python-dateutil
+six
+wsgiref
+zope.interface
