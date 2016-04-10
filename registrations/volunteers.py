@@ -24,7 +24,7 @@ class bhandara_volunteersdb(models.Model):
     doa = fields.Char(string='Date of Arrival')
     dod = fields.Char(string='Date of Departure')
 
-
+    _sql_constraints = [('abhyasiid_uniq', 'unique(abhyasiid)', 'Abhyasi ID already exists')]
 
 
 
